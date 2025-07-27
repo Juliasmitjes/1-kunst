@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 body {
-  @apply bg-banana font-nunito text-peach;
+  @apply bg-banana;
 }
 
 img {
   @apply rounded-lg;
 }
+

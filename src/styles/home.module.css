@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header {
+  @apply font-pangaia text-peach text-3xl;
+}
+
+.text {
+  @apply font-nunito text-gray-500 text-xl leading-8;
+}

@@ -61,7 +61,7 @@ const Home = () => {
           </div>
         </div>
 
-      <div className="max-w-7xl mx-auto mt-3 bg-blue text-left p-4 pl-10 rounded-lg border border-sky">
+      <div className="max-w-7xl mx-auto mt-3 bg-blue text-left p-4 pl-10 rounded-lg">
         <div className={styles.header}>
           <h1 className="pt-10 tracking-tight text-balance text-6xl text-sky">
           Van groene joekel tot verdord skelet
@@ -100,6 +100,22 @@ const Home = () => {
             src="/images/natuurlijk5.jpg" 
             alt="Kaars"
           />
+      </div>
+
+
+      <div className= "bg-banana mx-auto max-w-7xl items-center justify-between p-6 mt-3 mb-3 lg:px-8 rounded-lg">
+        <div className={styles.header}>
+          <h1 className="pt-10 tracking-tight text-balance text-6xl">
+          Van groene joekel tot verdord skelet
+          </h1> 
+        </div>
+        <div className={styles.text}>
+          <p className="mt-8 pb-10 pr-6 ">
+          Kerst het feest van licht, goud en glitters én van kerstbomen. Bij ons thuis altijd twee stuks, Nordmannen, een kleintje in de voorkamer en een grote joekel in de achterkamer. Bos in huis, dennengeur, het groen,  zo fijn, maar ook het trieste vooruitzicht: over een paar weken de bomen afgedankt bij het vuil als verdorde skeletten. 
+          </p>
+        </div>
+
+
       </div>
 
     </>

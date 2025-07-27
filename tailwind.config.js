@@ -12,8 +12,8 @@ export default {
         sky: '#748DAE',
       },
       fontFamily: {
-        pangaia: ['PP Pangaia', 'sans-serif'],
-        disco: ['DISCO', 'sans-serif'],
+        pangaia: ['PP Pangaia', 'sans-serif'],  
+        nunito: ['Nunito', 'sans-serif'],
       },
     },
   },

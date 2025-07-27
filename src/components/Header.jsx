@@ -58,13 +58,16 @@ const Header = () => {
         {/* --- Knoppen desktop menu --- */}
 
         <div className="hidden lg:flex lg:gap-x-12">
-          <a href="#" className="text-base/6 font-pangaia font-semibold text-peach hover:text-sky">
+          <a href="#" className="text-base/6 font-nunito font-semibold text-peach hover:text-sky">
+            Over mij
+          </a>
+          <a href="#" className="text-base/6 font-nunito font-semibold text-peach hover:text-sky">
             Winterbomen
           </a>
-          <a href="#" className="text-base/6 font-pangaia font-semibold text-peach hover:text-sky">
+          <a href="#" className="text-base/6 font-nunito font-semibold text-peach hover:text-sky">
             Zomerbomen
           </a>
-          <a href="#" className="text-base/6 font-pangaia font-semibold text-peach hover:text-sky">
+          <a href="#" className="text-base/6 font-nunito font-semibold text-peach hover:text-sky">
             Gallerij
           </a>
         </div>
@@ -72,7 +75,7 @@ const Header = () => {
            <button
           type="button"
           onClick={() => setShowContactForm(true)}
-          className="rounded-md bg-peach px-4 py-2 text-base font-pangaia font-semibold text-white hover:bg-sky transition"
+          className="rounded-md bg-peach px-4 py-2 text-base font-nunito font-semibold text-white hover:bg-sky transition"
         >
           Contact
         </button>

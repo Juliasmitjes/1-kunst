@@ -9,7 +9,9 @@ export default {
       colors: {
         banana: '#FFF5CD',
         peach: '#E78F81',
+        blue: '#B7E0FF',
         sky: '#748DAE',
+        white: '#FFFBF5',
       },
       fontFamily: {
         pangaia: ['PP Pangaia', 'sans-serif'],  

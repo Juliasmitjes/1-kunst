@@ -12,12 +12,11 @@ const Home = () => {
 
   return (
     <>
-      <div className="bg-banana text-left">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 pt-6 items-center">      
-          <div>
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3 items-stretch">      
+          <div className="bg-banana p-4 pl-10 rounded-lg max-h-[630px] overflow-hidden" >
 
             <div className={styles.header}>
-            <h1 className="pt-24 tracking-tight text-balance text-6xl">
+            <h1 className="pt-24 tracking-tight text-balance text-6xl text-peach">
               Schoonheid is overal
             </h1> 
             </div>
@@ -51,34 +50,57 @@ const Home = () => {
 
             </div>            
           </div>
-          <div>
+
+
+          <div className="max-h-[630px] overflow-hidden rounded-md">
             <img
-              className="pt-24 w-full rounded-lg"
+              className="w-full h-full object-cover"
               src="/images/test-image-woman-painting.jpg"
               alt="Vrouw schildert kunstwerk"
             />
           </div>
-          </div>
+        </div>
 
-          <div className={styles.header}>
-          <h1 className="mx-auto pt-24 tracking-tight text-balance">
-          Van groene joekel tot verdord skelet 
-          </h1>
-          </div>
-          
-          <div className={styles.text}>
-          <p className="max-w-4xl mx-auto mt-6 text-align-left">  
+      <div className="max-w-7xl mx-auto mt-3 bg-blue text-left p-4 pl-10 rounded-lg border border-sky">
+        <div className={styles.header}>
+          <h1 className="pt-10 tracking-tight text-balance text-6xl text-sky">
+          Van groene joekel tot verdord skelet
+          </h1> 
+        </div>
+        <div className={styles.text}>
+          <p className="mt-8 pb-10 pr-6 ">
           Kerst het feest van licht, goud en glitters én van kerstbomen. Bij ons thuis altijd twee stuks, Nordmannen, een kleintje in de voorkamer en een grote joekel in de achterkamer. Bos in huis, dennengeur, het groen,  zo fijn, maar ook het trieste vooruitzicht: over een paar weken de bomen afgedankt bij het vuil als verdorde skeletten. 
           </p>
-          </div>
+        </div>
+      </div>
       
-
-
-
- 
-     
-
-    </div>
+      <div className="grid grid-cols-1 lg:grid-cols-5 max-w-7xl mx-auto mt-3">
+          <img
+            className="w-full h-full object-cover rounded-none rounded-tl-xl rounded-bl-xl hover:brightness-75 transition"
+            src="/images/natuurlijk1.jpg" 
+            alt="Stof"
+          />
+            <img
+            className="w-full h-full object-cover rounded-none hover:brightness-75 transition"
+            src="/images/natuurlijk2.jpg" 
+            alt="Boom"
+          />
+            <img
+            className="w-full h-full object-cover rounded-none hover:brightness-75 transition" 
+            src="/images/natuurlijk3.jpg" 
+            alt="Kaars"
+          />
+          <img
+            className="w-full h-full object-cover rounded-none hover:brightness-75 transition"
+            src="/images/natuurlijk4.jpg" 
+            alt="Kaars"
+          />
+          <img
+            className="w-full h-full object-cover rounded-none rounded-tr-xl rounded-br-xl hover:brightness-75 transition"
+            src="/images/natuurlijk5.jpg" 
+            alt="Kaars"
+          />
+      </div>
 
     </>
   );

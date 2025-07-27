@@ -22,13 +22,27 @@ const Home = () => {
               Als je het wilt en kunt zien, is er schoonheid in vrijwel alle wezens en dingen.
             </p>
 
-            <button
+            <div className="flex space-x-4">
+
+              <button
               type="button"
               onClick={() => setShowContactForm(true)}
               className="rounded-md bg-peach px-4 py-2 text-xl font-nunito text-white hover:bg-sky transition"
             >
               Meer informatie 
             </button>
+
+            <button
+              type="button"
+              onClick={() => setShowContactForm(true)}
+              className="bg-white/30 backdrop-blur-sm text-peach border border-peach px-4 py-2 rounded-md text-xl font-nunito hover:bg-sky/50 transition"
+
+            >
+              Gallerij
+            </button>
+
+            </div>
+            
             
           </div>
           <div>

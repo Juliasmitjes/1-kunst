@@ -15,14 +15,12 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-
-function Page() {
-  const [showContactForm, setShowContactForm] = useState(false);
-}
+import ContactPanel from '../pages/ContactPanel.jsx'
 
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [showContactForm, setShowContactForm] = useState(false)
 
   return (
     <header className="bg-banana">
@@ -72,7 +70,7 @@ const Header = () => {
           Contact
         </button>
         </div>
-      </nav>
+      </nav> 
 
 
 
@@ -139,6 +137,14 @@ const Header = () => {
           </div>
         </DialogPanel>
       </Dialog>
+      
+
+     {/* --- JSX ELEMENTEN */}
+
+    {showContactForm && (
+        <ContactPanel onClose={() => setShowContactForm(false)} />
+    )}
+
     </header>
   )
 }

@@ -1,11 +1,13 @@
 'use client'
 
-import { useState } from 'react'
-import ContactPanel from '../pages/ContactPanel.jsx'
+import { useOutletContext } from 'react-router-dom'
+import { ArrowRightIcon } from '@heroicons/react/24/outline'
+import { Link } from 'react-router-dom'
+
 
 const Home = () => {
 
-  const [showContactForm, setShowContactForm] = useState(false)
+  const { setShowContactForm } = useOutletContext()
 
   return (
     <>
@@ -24,26 +26,23 @@ const Home = () => {
 
             <div className="flex space-x-4">
 
-              <button
-              type="button"
-              onClick={() => setShowContactForm(true)}
-              className="rounded-md bg-peach px-4 py-2 text-xl font-nunito text-white hover:bg-sky transition"
+               <button
+                  type="button"
+                  onClick={() => setShowContactForm(true)}
+                  className="rounded-md bg-peach px-4 py-2 text-xl font-nunito text-white hover:bg-sky transition"
+                >
+                  Meer informatie
+                </button>
+
+
+           <Link
+              to="/gallerij"
+              className="inline-flex items-center gap-2 bg-white/30 backdrop-blur-sm text-peach border border-peach px-4 py-2 rounded-md text-xl font-nunito hover:bg-sky/50 transition"
             >
-              Meer informatie 
-            </button>
+              Gallerij <ArrowRightIcon className="w-5 h-5" />
+            </Link>
 
-            <button
-              type="button"
-              onClick={() => setShowContactForm(true)}
-              className="bg-white/30 backdrop-blur-sm text-peach border border-peach px-4 py-2 rounded-md text-xl font-nunito hover:bg-sky/50 transition"
-
-            >
-              Gallerij
-            </button>
-
-            </div>
-            
-            
+            </div>            
           </div>
           <div>
             <img
@@ -52,15 +51,12 @@ const Home = () => {
               alt="Vrouw schildert kunstwerk"
             />
           </div>
-          
       </div>
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 pt-6 items-center">  
+
+      </div>
+
     </div>
-
-      {/* --- JSX ELEMENTEN */}
-
-    {showContactForm && (
-        <ContactPanel onClose={() => setShowContactForm(false)} />
-    )}
 
     </>
   );

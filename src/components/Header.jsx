@@ -16,9 +16,8 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import ContactPanel from '../pages/ContactPanel.jsx'
 
 
-const Header = () => {
+const Header = ({ setShowContactForm }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [showContactForm, setShowContactForm] = useState(false)
 
   return (
     <header className="bg-banana">
@@ -65,16 +64,36 @@ const Header = () => {
            >
           Over mij
           </NavLink>
-          <a href="#" className="text-xl/6 font-nunito text-peach hover:text-sky">
+
+          <NavLink
+          to="/winterbomen"
+          className={({ isActive }) =>
+            `text-xl/6 font-nunito ${isActive ? 'text-sky' : 'text-peach hover:text-sky'}`
+          }
+          >
             Winterbomen
-          </a>
-          <a href="#" className="text-xl/6 font-nunito text-peach hover:text-sky">
+          </NavLink>
+
+          <NavLink
+          to="/zomerbomen"
+          className={({ isActive }) =>
+            `text-xl/6 font-nunito ${isActive ? 'text-sky' : 'text-peach hover:text-sky'}`
+          }
+          >
             Zomerbomen
-          </a>
-          <a href="#" className="text-xl/6 font-nunito text-peach hover:text-sky">
+          </NavLink>
+
+         <NavLink
+          to="/gallerij"
+          className={({ isActive }) =>
+            `text-xl/6 font-nunito ${isActive ? 'text-sky' : 'text-peach hover:text-sky'}`
+          }
+          >
             Gallerij
-          </a>
+          </NavLink>
+
         </div>
+
         <div className="hidden lg:flex pl-16 lg:justify-end">
         <button
           type="button"
@@ -84,6 +103,7 @@ const Header = () => {
           Contact
         </button>
         </div>
+
       </nav> 
 
 
@@ -151,14 +171,6 @@ const Header = () => {
           </div>
         </DialogPanel>
       </Dialog>
-
-
-
-     {/* --- JSX ELEMENTEN */}
-
-    {showContactForm && (
-        <ContactPanel onClose={() => setShowContactForm(false)} />
-    )}
 
     </header>
   )

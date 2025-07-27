@@ -8,6 +8,8 @@ export default {
     extend: {
       colors: {
         banana: '#FFF5CD',
+        peach: '#E78F81',
+        sky: '#748DAE',
       },
       fontFamily: {
         pangaia: ['PP Pangaia', 'sans-serif'],

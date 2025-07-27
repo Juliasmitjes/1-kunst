@@ -16,6 +16,10 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
+function Page() {
+  const [showContactForm, setShowContactForm] = useState(false);
+}
+
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -30,8 +34,8 @@ const Header = () => {
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img
-              alt=""
-              src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+              alt="TESTLOGO"
+              src="/images/testlogo.png"
               className="h-8 w-auto"
             />
           </a>
@@ -49,20 +53,24 @@ const Header = () => {
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
          
 
-          <a href="#" className="text-sm/6 font-pangaia font-semibold text-gray-900">
+          <a href="#" className="text-base/6 font-pangaia font-semibold text-peach hover:text-sky">
             Winterbomen
           </a>
-          <a href="#" className="text-sm/6 font-pangaia font-semibold text-gray-900">
+          <a href="#" className="text-base/6 font-pangaia font-semibold text-peach hover:text-sky">
             Zomerbomen
           </a>
-          <a href="#" className="text-sm/6 font-pangaia font-semibold text-gray-900">
+          <a href="#" className="text-base/6 font-pangaia font-semibold text-peach hover:text-sky">
             Gallerij
           </a>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm/6 font-pangaia font-semibold text-gray-900">
-            Contact <span aria-hidden="true">&rarr;</span>
-          </a>
+           <button
+          type="button"
+          onClick={() => setShowContactForm(true)}
+          className="rounded-md bg-peach px-4 py-2 text-base font-pangaia font-semibold text-white hover:bg-sky transition"
+        >
+          Contact
+        </button>
         </div>
       </nav>
 

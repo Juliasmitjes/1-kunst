@@ -75,7 +75,7 @@ const Header = () => {
             Gallerij
           </a>
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex pl-16 lg:justify-end">
            <button
           type="button"
           onClick={() => setShowContactForm(true)}

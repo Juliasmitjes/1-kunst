@@ -37,7 +37,7 @@ const Home = () => {
 
            <Link
               to="/gallerij"
-              className="inline-flex items-center gap-2 bg-white/30 hover:text-white backdrop-blur-sm text-peach border border-peach px-4 py-2 rounded-md text-xl font-nunito hover:bg-sky/50 transition"
+              className="inline-flex items-center gap-2 bg-white/30 hover:text-white backdrop-blur-sm text-peach border border-peach hover:border-sky px-4 py-2 rounded-md text-xl font-nunito hover:bg-sky/50 transition"
             >
               Gallerij <ArrowRightIcon className="w-5 h-5" />
             </Link>

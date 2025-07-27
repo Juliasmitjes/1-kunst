@@ -38,6 +38,10 @@ const Header = () => {
             />
           </a>
         </div>
+
+
+        {/* --- stukje mobiel NOG DOEN --- */}
+
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -48,9 +52,12 @@ const Header = () => {
             <Bars3Icon aria-hidden="true" className="size-6" />
           </button>
         </div>
-        <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-         
 
+
+
+        {/* --- Knoppen desktop menu --- */}
+
+        <div className="hidden lg:flex lg:gap-x-12">
           <a href="#" className="text-base/6 font-pangaia font-semibold text-peach hover:text-sky">
             Winterbomen
           </a>
@@ -60,7 +67,7 @@ const Header = () => {
           <a href="#" className="text-base/6 font-pangaia font-semibold text-peach hover:text-sky">
             Gallerij
           </a>
-        </PopoverGroup>
+        </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
            <button
           type="button"
@@ -74,7 +81,7 @@ const Header = () => {
 
 
 
-      {/* --- Mobile menu --- */}
+      {/* --- Mobile menu NOG DOEN --- */}
 
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <div className="fixed inset-0 z-50" />
@@ -137,7 +144,8 @@ const Header = () => {
           </div>
         </DialogPanel>
       </Dialog>
-      
+
+
 
      {/* --- JSX ELEMENTEN */}
 

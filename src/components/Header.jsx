@@ -76,7 +76,7 @@ const Header = () => {
           </a>
         </div>
         <div className="hidden lg:flex pl-16 lg:justify-end">
-           <button
+        <button
           type="button"
           onClick={() => setShowContactForm(true)}
           className="rounded-md bg-peach px-4 py-2 text-xl font-nunito text-white hover:bg-sky transition"

@@ -6,10 +6,10 @@ const ContactPanel = ({ onClose }) => {
       <button onClick={onClose} className="absolute top-4 right-4 text-sky font-bold">✕</button>
       <h2 className="text-lg font-pangaia font-semibold text-peach mb-4">Neem contact op</h2>
       <form className="space-y-4">
-        <input type="text" placeholder="Naam" className="w-full border rounded px-4 py-2" />
-        <input type="email" placeholder="Email" className="w-full border rounded px-4 py-2" />
-        <textarea placeholder="Bericht" className="w-full border rounded px-4 py-2" rows="5" />
-        <button type="submit" className="bg-sky text-white rounded px-4 py-2 font-semibold">
+        <input type="text" placeholder="Naam" className="font-nunito w-full border rounded px-4 py-2" />
+        <input type="email" placeholder="Email" className="font-nunito w-full border rounded px-4 py-2" />
+        <textarea placeholder="Bericht" className="font-nunito w-full border rounded px-4 py-2" rows="5" />
+        <button type="submit" className="font-nunito bg-sky text-white rounded px-4 py-2 font-semibold">
           Verstuur
         </button>
       </form>

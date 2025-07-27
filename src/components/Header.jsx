@@ -1,14 +1,12 @@
 'use client'
 
 import { useState } from 'react'
+import { NavLink } from 'react-router-dom';
 import {
   Dialog,
   DialogPanel,
   Disclosure,
   DisclosureButton,
-  PopoverButton,
-  PopoverGroup,
-  PopoverPanel,
 } from '@headlessui/react'
 import {
   Bars3Icon,
@@ -58,16 +56,22 @@ const Header = () => {
         {/* --- Knoppen desktop menu --- */}
 
         <div className="hidden lg:flex lg:gap-x-12">
-          <a href="#" className="text-base/6 font-nunito font-semibold text-peach hover:text-sky">
-            Over mij
-          </a>
-          <a href="#" className="text-base/6 font-nunito font-semibold text-peach hover:text-sky">
+          <NavLink
+          to="/"
+          end
+          className={({ isActive }) =>
+            `text-xl/6 font-nunito ${isActive ? 'text-sky' : 'text-peach hover:text-sky'}`
+          }
+           >
+          Over mij
+          </NavLink>
+          <a href="#" className="text-xl/6 font-nunito text-peach hover:text-sky">
             Winterbomen
           </a>
-          <a href="#" className="text-base/6 font-nunito font-semibold text-peach hover:text-sky">
+          <a href="#" className="text-xl/6 font-nunito text-peach hover:text-sky">
             Zomerbomen
           </a>
-          <a href="#" className="text-base/6 font-nunito font-semibold text-peach hover:text-sky">
+          <a href="#" className="text-xl/6 font-nunito text-peach hover:text-sky">
             Gallerij
           </a>
         </div>
@@ -75,7 +79,7 @@ const Header = () => {
            <button
           type="button"
           onClick={() => setShowContactForm(true)}
-          className="rounded-md bg-peach px-4 py-2 text-base font-nunito font-semibold text-white hover:bg-sky transition"
+          className="rounded-md bg-peach px-4 py-2 text-xl font-nunito text-white hover:bg-sky transition"
         >
           Contact
         </button>

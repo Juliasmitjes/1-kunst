@@ -1,7 +1,6 @@
 const Gallery = () => {
   return (
     <>
-      <h1>gallerij! </h1>
     </>
   )
 };

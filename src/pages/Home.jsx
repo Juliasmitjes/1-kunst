@@ -90,7 +90,7 @@ const Home = () => {
 
       <div  className="max-w-7xl mx-auto mt-3 bg-peach text-left p-4 pl-10 rounded-lg">
         <div className={styles.header}>
-          <h1 id="textDiscover" className="pt-10 tracking-tight text-balance text-6xl text-white transition transform translate-y-20 duration-500">
+          <h1 id="textDiscover" className="pt-3 pb-3 tracking-tight text-balance text-6xl text-white transition transform translate-y-20 duration-1000">
           Ontdek Onze Bomen
           </h1> 
         </div>

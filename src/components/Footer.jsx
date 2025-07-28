@@ -1,7 +1,8 @@
 'use client' 
 
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
-import { NavLink } from 'react-router-dom';
+import { NavLink, ScrollRestoration  } from 'react-router-dom';
+
 
 
 const Footer = ({ setShowContactForm }) => {
@@ -32,7 +33,11 @@ const Footer = ({ setShowContactForm }) => {
              <li>
                 <NavLink 
                   to="/" 
-                  className="font-nunito text-white hover:text-sky"
+                  end
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                  className={({ isActive }) =>
+                    `font-bold font-nunito ${isActive ? 'text-sky' : 'text-white hover:text-sky'}`
+                  }
                 >
                   Over mij
                 </NavLink>

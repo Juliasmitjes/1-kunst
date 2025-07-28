@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ContactPanel from "./ContactPanel";
+import ContactPanel from '../components/ContactPanel.jsx'
 
 const Contact = () =>{
   const [showContactForm, setShowContactForm] = useState(false);

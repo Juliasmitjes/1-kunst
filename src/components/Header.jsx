@@ -64,7 +64,7 @@ const Header = ({ setShowContactForm }) => {
           </NavLink>
 
           <NavLink
-          to="/winterbomen"
+          to="/bomen"
           className={({ isActive }) =>
             `text-xl/6 font-nunito ${isActive ? 'text-sky' : 'text-peach hover:text-sky'}`
           }
@@ -73,7 +73,7 @@ const Header = ({ setShowContactForm }) => {
           </NavLink>
 
           <NavLink
-          to="/zomerbomen"
+          to="/bomen"
           className={({ isActive }) =>
             `text-xl/6 font-nunito ${isActive ? 'text-sky' : 'text-peach hover:text-sky'}`
           }

@@ -99,7 +99,7 @@ const Home = () => {
 
      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3 items-stretch mt-3">
         <div className="relative group max-h-[630px] overflow-hidden rounded-md">
-          <Link to="/pagina1">
+          <Link to="/bomen">
             <img
               className="w-full h-full object-cover brightness-125"
               src="/images/boom1.jpg"
@@ -112,7 +112,7 @@ const Home = () => {
         </div>
 
         <div className="relative group max-h-[630px] overflow-hidden rounded-md">
-          <Link to="/pagina2">
+          <Link to="/bomen">
             <img
               className="w-full h-full object-cover brightness-125"
               src="/images/boom2.jpg"

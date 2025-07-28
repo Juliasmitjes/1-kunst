@@ -15,6 +15,7 @@ const Layout = () => {
       {showContactForm && (
         <ContactPanel onClose={() => setShowContactForm(false)} />
       )}
+      <Footer setShowContactForm={setShowContactForm}/>
     </>
   )
 };

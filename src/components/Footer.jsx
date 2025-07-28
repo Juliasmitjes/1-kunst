@@ -1,40 +1,50 @@
-import React from 'react';
+'use client' 
 
-const Footer = () => {
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+
+
+const Footer = ({ setShowContactForm }) => {
   return (
-    <footer className="bg-[#bae3ff] py-12 px-6 md:px-12">
-      <div className="flex flex-col md:flex-row justify-between">
+    <footer className="bg-white">
+      <div className="bg-peach mx-auto flex flex-col max-w-7xl md:flex-row justify-between p-6 mt-3 mb-3 lg:px-8 rounded-lg">
         <div className="mb-6 md:mb-0">
-          <div className="font-bold mb-4">Site name</div>
-          <div className="flex gap-4 text-gray-700">
-            <i className="fab fa-facebook"></i>
-            <i className="fab fa-linkedin"></i>
-            <i className="fab fa-instagram"></i>
+          <div className="font-nunito text-white mb-4">Site name
           </div>
+
+          <div className="flex gap-4 text-white text-2xl">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Bezoek Facebook">
+              <FaFacebookF />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Bezoek LinkedIn">
+              <FaLinkedinIn />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Bezoek Instagram">
+              <FaInstagram />
+            </a>
+          </div>
+
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="mr-20 gap-6">
           <div>
-            <div className="font-medium mb-2">Topic</div>
             <ul className="text-sm space-y-1 text-gray-700">
-              <li><a href="#">Page</a></li>
-              <li><a href="#">Page</a></li>
-              <li><a href="#">Page</a></li>
-            </ul>
-          </div>
-          <div>
-            <div className="font-medium mb-2">Topic</div>
-            <ul className="text-sm space-y-1 text-gray-700">
-              <li><a href="#">Page</a></li>
-              <li><a href="#">Page</a></li>
-              <li><a href="#">Page</a></li>
-            </ul>
-          </div>
-          <div>
-            <div className="font-medium mb-2">Topic</div>
-            <ul className="text-sm space-y-1 text-gray-700">
-              <li><a href="#">Page</a></li>
-              <li><a href="#">Page</a></li>
-              <li><a href="#">Page</a></li>
+              <li><a href="#" className="font-nunito text-white hover:text-sky">Over mij</a></li>
+              <li><a href="#" className="font-nunito text-white hover:text-sky">Winterbomen</a></li>
+              <li><a href="#" className="font-nunito text-white hover:text-sky">Zomerbomen</a></li>
+              <li><a href="#" className="font-nunito text-white hover:text-sky">Gallerij</a></li>
+
+              <li>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault(); // voorkomt dat de pagina naar boven springt
+                    setShowContactForm(true); // opent het formulier
+                  }}
+                  className="font-nunito text-white hover:text-sky"
+                >
+                  Contact
+                </a>
+              </li>
+
             </ul>
           </div>
         </div>

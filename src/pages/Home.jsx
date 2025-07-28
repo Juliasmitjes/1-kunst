@@ -36,7 +36,7 @@ const Home = () => {
           <div className="bg-banana p-4 pl-10 rounded-lg max-h-[630px] overflow-hidden" >
 
             <div className={styles.header}>
-            <h1 className="pt-24 tracking-tight text-balance text-6xl text-peach">
+            <h1 className="pt-24 text-balance text-6xl text-peach">
               Moeder Accountant Kunstenaar 
             </h1> 
             </div>

@@ -1,6 +1,7 @@
 'use client' 
 
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
 
 
 const Footer = ({ setShowContactForm }) => {
@@ -27,9 +28,34 @@ const Footer = ({ setShowContactForm }) => {
         <div className="mr-20 gap-6">
           <div>
             <ul className="text-sm space-y-1 text-gray-700">
-              <li><a href="#" className="font-nunito text-white hover:text-sky">Over mij</a></li>
-              <li><a href="#" className="font-nunito text-white hover:text-sky">Winterbomen</a></li>
-              <li><a href="#" className="font-nunito text-white hover:text-sky">Zomerbomen</a></li>
+
+             <li>
+                <NavLink 
+                  to="/" 
+                  className="font-nunito text-white hover:text-sky"
+                >
+                  Over mij
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink 
+                  to="/bomen" 
+                  className="font-nunito text-white hover:text-sky"
+                >
+                  Winterbomen
+                </NavLink>
+              </li>
+
+               <li>
+                <NavLink 
+                  to="/bomen" 
+                  className="font-nunito text-white hover:text-sky"
+                >
+                  Zomerbomen
+                </NavLink>
+              </li>
+
               <li><a href="#" className="font-nunito text-white hover:text-sky">Gallerij</a></li>
 
               <li>

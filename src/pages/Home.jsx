@@ -97,24 +97,33 @@ const Home = () => {
       </div>
 
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3 items-stretch mt-3">
-        <div className="max-h-[630px] overflow-hidden rounded-md">
+     <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3 items-stretch mt-3">
+        <div className="relative group max-h-[630px] overflow-hidden rounded-md">
+          <Link to="/pagina1">
             <img
               className="w-full h-full object-cover brightness-125"
               src="/images/boom1.jpg"
               alt="Bomen"
             />
+            <div className="absolute inset-0 bg-banana opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+              <span className="text-peach text-xl font-nunito">Bekijk winterbomen</span>
+            </div>
+          </Link>
         </div>
 
-        <div className="max-h-[630px] overflow-hidden rounded-md">
+        <div className="relative group max-h-[630px] overflow-hidden rounded-md">
+          <Link to="/pagina2">
             <img
-              className="w-full h-full object-cover brightness-150"
+              className="w-full h-full object-cover brightness-125"
               src="/images/boom2.jpg"
               alt="Bomen"
             />
+            <div className="absolute inset-0 bg-banana opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+              <span className="text-peach text-xl font-nunito">Bekijk zomerbomen</span>
+            </div>
+          </Link>
         </div>
-        
-     </div>
+      </div>  
     </>
   );
 };

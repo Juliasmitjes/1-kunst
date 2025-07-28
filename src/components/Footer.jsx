@@ -10,7 +10,7 @@ const Footer = ({ setShowContactForm }) => {
     <footer className="bg-white">
       <div className="bg-peach mx-auto flex flex-col max-w-7xl md:flex-row justify-between p-6 mt-3 mb-3 lg:px-8 rounded-lg">
         <div className="mb-6 md:mb-0">
-          <div className="font-nunito text-white mb-4">Site name
+          <div className="font-bold font-nunito text-white mb-4">Site name
           </div>
 
           <div className="flex gap-4 text-white text-2xl">
@@ -46,7 +46,11 @@ const Footer = ({ setShowContactForm }) => {
               <li>
                 <NavLink 
                   to="/bomen" 
-                  className="font-nunito text-white hover:text-sky"
+                  end
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                   className={({ isActive }) =>
+                    `font-bold font-nunito ${isActive ? 'text-sky' : 'text-white hover:text-sky'}`
+                  }
                 >
                   Winterbomen
                 </NavLink>
@@ -55,13 +59,28 @@ const Footer = ({ setShowContactForm }) => {
                <li>
                 <NavLink 
                   to="/bomen" 
-                  className="font-nunito text-white hover:text-sky"
+                  end
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                   className={({ isActive }) =>
+                    `font-bold font-nunito ${isActive ? 'text-sky' : 'text-white hover:text-sky'}`
+                  }
                 >
                   Zomerbomen
                 </NavLink>
               </li>
 
-              <li><a href="#" className="font-nunito text-white hover:text-sky">Gallerij</a></li>
+               <li>
+                <NavLink 
+                  to="/gallerij" 
+                  end
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                   className={({ isActive }) =>
+                    `font-bold font-nunito ${isActive ? 'text-sky' : 'text-white hover:text-sky'}`
+                  }
+                >
+                  Gallerij
+                </NavLink>
+              </li>
 
               <li>
                 <a
@@ -70,7 +89,7 @@ const Footer = ({ setShowContactForm }) => {
                     e.preventDefault(); // voorkomt dat de pagina naar boven springt
                     setShowContactForm(true); // opent het formulier
                   }}
-                  className="font-nunito text-white hover:text-sky"
+                  className="font-bold font-nunito text-white hover:text-sky"
                 >
                   Contact
                 </a>

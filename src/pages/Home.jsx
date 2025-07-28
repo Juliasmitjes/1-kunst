@@ -95,6 +95,26 @@ const Home = () => {
           </h1> 
         </div>
       </div>
+
+
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3 items-stretch mt-3">
+        <div className="max-h-[630px] overflow-hidden rounded-md">
+            <img
+              className="w-full h-full object-cover brightness-125"
+              src="/images/boom1.jpg"
+              alt="Bomen"
+            />
+        </div>
+
+        <div className="max-h-[630px] overflow-hidden rounded-md">
+            <img
+              className="w-full h-full object-cover brightness-150"
+              src="/images/boom2.jpg"
+              alt="Bomen"
+            />
+        </div>
+        
+     </div>
     </>
   );
 };

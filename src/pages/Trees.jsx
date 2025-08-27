@@ -406,7 +406,7 @@ const Trees = () => {
             <img
               key={index}
               className="w-full h-full object-cover brightness-110"
-              src={product.src}
+              src={`${process.env.PUBLIC_URL}/${product.src}`}
               alt={product.alt}
             />
           ))}</div>

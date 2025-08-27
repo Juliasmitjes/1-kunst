@@ -83,7 +83,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto mt-3">
           <img
             className="w-full h-full object-cover max-h-[330px] rounded-lg brightness-110 transition"
-            src="/images/painting.jpg" 
+            src={`${process.env.PUBLIC_URL}/images/painting.jpg`} 
             alt="Schilderij"
           />            
         </div>
@@ -102,7 +102,7 @@ const Home = () => {
           <Link to="/bomen">
             <img
               className="w-full h-full object-cover brightness-125 group-hover:scale-125 transition duration-300"
-              src="/images/boom1.jpg"
+              src={`${process.env.PUBLIC_URL}/images/boom1.jpg`}
               alt="Bomen"
             />
             <div className="absolute inset-0 bg-banana bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center font-bold justify-center">
@@ -117,7 +117,7 @@ const Home = () => {
           
             <img
               className="w-full h-full object-cover brightness-125"
-              src="/images/boom2.jpg"
+              src={`${process.env.PUBLIC_URL}/images/boom2.jpg`}
               alt="Bomen"
             />
             {/* <div className="absolute inset-0 bg-banana opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">

@@ -24,12 +24,14 @@ const sortOptions = [
   { name: 'Prijs: laag naar hoog', href: '#', current: false },
   { name: 'Prijs: hoog naar laag', href: '#', current: false },
 ]
+
 const subCategories = [
   { name: 'Winterbomen', href: '#' },
   { name: 'Zomerbomen', href: '#' },
   { name: 'Schilderijen', href: '#' },
   { name: 'Losse onderdelen', href: '#' },
 ]
+
 const filters = [
   {
     id: 'color',
@@ -62,7 +64,11 @@ function classNames(...classes) {
 }
 
 const Trees = () => {
+
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
   const [selectedFilters, setSelectedFilters] = useState({
   color: [],
   size: [],
@@ -71,15 +77,22 @@ const Trees = () => {
 
   useEffect(() => {
   const result = products.filter((product) => {
+    const matchesCategory =
+      !selectedCategory || product.category === selectedCategory;
+
     const matchesColor =
-      selectedFilters.color.length === 0 || selectedFilters.color.includes(product.color);
+      selectedFilters.color.length === 0 ||
+      selectedFilters.color.includes(product.color.toLowerCase());
+
     const matchesSize =
-      selectedFilters.size.length === 0 || selectedFilters.size.includes(product.size);
-    return matchesColor && matchesSize;
+      selectedFilters.size.length === 0 ||
+      selectedFilters.size.includes(product.size.toLowerCase());
+
+    return matchesCategory && matchesColor && matchesSize;
   });
 
-  setFilteredProducts(result); 
-  }, [selectedFilters]);
+  setFilteredProducts(result);
+}, [selectedFilters, selectedCategory]);
 
 
   return (
@@ -276,10 +289,16 @@ const Trees = () => {
                 <ul role="list" className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900">
                   {subCategories.map((category) => (
                     <li key={category.name}>
-                      <a href={category.href}>{category.name}</a>
+                      <button
+                        onClick={() => setSelectedCategory(category.name)}
+                        className="text-left text-gray-700 hover:text-indigo-600"
+                      >
+                        {category.name}
+                      </button>
                     </li>
                   ))}
                 </ul>
+
 
                 {filters.map((section) => (
                   <Disclosure key={section.id} as="div" className="border-b border-gray-200 py-6">

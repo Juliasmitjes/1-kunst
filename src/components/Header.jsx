@@ -69,17 +69,9 @@ const Header = ({ setShowContactForm }) => {
             `text-xl/6 font-nunito ${isActive ? 'text-sky' : 'text-peach hover:text-sky'}`
           }
           >
-            Winterbomen
+            Producten
           </NavLink>
 
-          <NavLink
-          to="/bomen"
-          className={({ isActive }) =>
-            `text-xl/6 font-nunito ${isActive ? 'text-sky' : 'text-peach hover:text-sky'}`
-          }
-          >
-            Zomerbomen
-          </NavLink>
 
          <NavLink
           to="/gallerij"

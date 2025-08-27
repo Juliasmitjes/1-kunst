@@ -52,20 +52,7 @@ const Footer = ({ setShowContactForm }) => {
                     `font-bold font-nunito ${isActive ? 'text-sky' : 'text-white hover:text-sky'}`
                   }
                 >
-                  Winterbomen
-                </NavLink>
-              </li>
-
-               <li>
-                <NavLink 
-                  to="/bomen" 
-                  end
-                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                   className={({ isActive }) =>
-                    `font-bold font-nunito ${isActive ? 'text-sky' : 'text-white hover:text-sky'}`
-                  }
-                >
-                  Zomerbomen
+                  Producten
                 </NavLink>
               </li>
 

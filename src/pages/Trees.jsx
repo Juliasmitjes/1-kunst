@@ -394,7 +394,7 @@ const Trees = () => {
                     setSelectedFilters({ color: [], size: [] });
                     setSelectedCategory(null);
                   }}
-                  className="text-md mt-5 text-red-600 hover:text-red-800 underline"
+                  className="text-md font-nunito font-bold mt-5 text-red-600 hover:text-red-800 underline"
                 >
                   Reset filters
                 </button>

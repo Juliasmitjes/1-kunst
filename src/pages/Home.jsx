@@ -4,7 +4,7 @@ import { useOutletContext } from 'react-router-dom'
 import { ArrowRightIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
 import styles from '../styles/home.module.css'
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 
 const Home = () => {
@@ -62,10 +62,10 @@ const Home = () => {
 
 
            <Link
-              to="/gallerij"
+              to="/bomen"
               className="inline-flex items-center gap-2 bg-white/30 hover:text-white backdrop-blur-sm text-peach border border-peach hover:border-sky px-4 py-2 rounded-md text-xl font-nunito hover:bg-sky/50 transition"
             >
-              Gallerij <ArrowRightIcon className="w-5 h-5" />
+              Producten <ArrowRightIcon className="w-5 h-5" />
             </Link>
 
             </div>            
@@ -101,12 +101,14 @@ const Home = () => {
         <div className="relative group max-h-[630px] overflow-hidden rounded-md">
           <Link to="/bomen">
             <img
-              className="w-full h-full object-cover brightness-125"
+              className="w-full h-full object-cover brightness-125 group-hover:scale-125 transition duration-300"
               src="/images/boom1.jpg"
               alt="Bomen"
             />
-            <div className="absolute inset-0 bg-banana opacity-0 group-hover:opacity-100 transition duration-300 flex items-center font-bold justify-center">
-              <span className="text-peach text-xl font-nunito">Bekijk producten</span>
+            <div className="absolute inset-0 bg-banana bg-opacity-0 group-hover:bg-opacity-60 transition duration-300 flex items-center font-bold justify-center">
+              {/* <span className="text-peach border-solid text-4xl font-nunito opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Bekijk producten
+              </span> */}
             </div>
           </Link>
         </div>

@@ -224,6 +224,16 @@ const Trees = () => {
                   </Disclosure>
                 ))}
               </form>
+              <button
+                  type="button"
+                  onClick={() => {
+                    setSelectedFilters({ color: [], size: [] });
+                    setSelectedCategory(null);
+                  }}
+                  className="text-md text-gray-400 items-start flex pl-4 pt-2"
+                >
+                  Reset alle filters
+                </button>
             </DialogPanel>
           </div>
         </Dialog>
@@ -376,6 +386,18 @@ const Trees = () => {
                     </DisclosurePanel>
                   </Disclosure>
                 ))}
+
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSelectedFilters({ color: [], size: [] });
+                    setSelectedCategory(null);
+                  }}
+                  className="text-sm text-red-600 hover:text-red-800 underline"
+                >
+                  Reset alle filters
+                </button>
+
               </form>
 
               {/* Product grid */}

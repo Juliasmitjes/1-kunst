@@ -142,9 +142,12 @@ const Trees = () => {
                 <ul role="list" className="px-2 py-3 font-medium text-gray-900">
                   {subCategories.map((category) => (
                     <li key={category.name}>
-                      <a href={category.href} className="block px-2 py-3">
+                      <button
+                        type="button"
+                        onClick={() => setSelectedCategory(category.name)}
+                        className="block px-2 py-3">
                         {category.name}
-                      </a>
+                      </button>
                     </li>
                   ))}
                 </ul>
@@ -290,6 +293,7 @@ const Trees = () => {
                   {subCategories.map((category) => (
                     <li key={category.name}>
                       <button
+                        type="button"
                         onClick={() => setSelectedCategory(category.name)}
                         className="text-left text-gray-700 hover:text-indigo-600"
                       >

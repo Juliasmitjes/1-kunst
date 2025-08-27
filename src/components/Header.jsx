@@ -28,7 +28,7 @@ const Header = ({ setShowContactForm }) => {
             <span className="sr-only">Your Company</span>
             <img
               alt="TESTLOGO"
-              src="/images/testlogo.png"
+              src={`${process.env.PUBLIC_URL}/images/testlogo.png`}
               className="h-8 w-auto"
             />
           </a>

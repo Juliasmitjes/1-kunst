@@ -2,7 +2,7 @@
 
 import styles from '../styles/home.module.css'
 import products from '../data/products'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   Dialog,
   DialogBackdrop,
@@ -63,6 +63,24 @@ function classNames(...classes) {
 
 const Trees = () => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+  const [selectedFilters, setSelectedFilters] = useState({
+  color: [],
+  size: [],
+  });
+  const [filteredProducts, setFilteredProducts] = useState(products);
+
+  useEffect(() => {
+  const result = products.filter((product) => {
+    const matchesColor =
+      selectedFilters.color.length === 0 || selectedFilters.color.includes(product.color);
+    const matchesSize =
+      selectedFilters.size.length === 0 || selectedFilters.size.includes(product.size);
+    return matchesColor && matchesSize;
+  });
+
+  setFilteredProducts(result); 
+  }, [selectedFilters]);
+
 
   return (
     <div  className="max-w-7xl mx-auto pt-24 bg-peach text-left p-4 pl-10 rounded-lg">
@@ -136,11 +154,24 @@ const Trees = () => {
                             <div className="flex h-5 shrink-0 items-center">
                               <div className="group grid size-4 grid-cols-1">
                                 <input
-                                  defaultValue={option.value}
+                                  type="checkbox"
+                                  value={option.value}
                                   id={`filter-mobile-${section.id}-${optionIdx}`}
                                   name={`${section.id}[]`}
-                                  type="checkbox"
-                                  className="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                                  checked={selectedFilters[section.id]?.includes(option.value) || false}
+                                  onChange={(e) => {
+                                    const { checked, value } = e.target;
+                                    setSelectedFilters((prev) => {
+                                      const list = prev[section.id] || [];
+                                      return {
+                                        ...prev,
+                                        [section.id]: checked
+                                          ? [...list, value]                  
+                                          : list.filter((v) => v !== value),  
+                                      };
+                                    });
+                                  }}
+                                  className="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600                             focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
                                 />
                                 <svg
                                   fill="none"
@@ -268,11 +299,27 @@ const Trees = () => {
                             <div className="flex h-5 shrink-0 items-center">
                               <div className="group grid size-4 grid-cols-1">
                                 <input
-                                  defaultValue={option.value}
-                                  defaultChecked={option.checked}
+                                  type="checkbox"
+                                  value={option.value}
                                   id={`filter-${section.id}-${optionIdx}`}
                                   name={`${section.id}[]`}
-                                  type="checkbox"
+                                  checked={selectedFilters[section.id]?.includes(option.value) || false}
+                                  onChange={(e) => {
+                                    const value = e.target.value;
+                                    const isChecked = e.target.checked;
+
+                                    setSelectedFilters((prev) => {
+                                      const currentValues = prev[section.id] || [];
+                                      const updatedValues = isChecked
+                                        ? [...currentValues, value]
+                                        : currentValues.filter((v) => v !== value);
+
+                                      return {
+                                        ...prev,
+                                        [section.id]: updatedValues,
+                                      };
+                                    });
+                                  }}
                                   className="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
                                 />
                                 <svg
@@ -309,7 +356,7 @@ const Trees = () => {
               </form>
 
               {/* Product grid */}
-              <div className="lg:col-span-3 grid mx-auto grid-cols-4 gap-3 items-stretch mt-3">{products.map((product, index) => (
+              <div className="lg:col-span-3 grid mx-auto grid-cols-4 gap-3 items-stretch mt-3">{filteredProducts.map((product, index) => (
             <img
               key={index}
               className="w-full h-full object-cover brightness-110"

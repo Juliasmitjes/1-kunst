@@ -37,7 +37,7 @@ const filters = [
     options: [
       { value: 'wit', label: 'Wit', checked: false },
       { value: 'beige', label: 'Beige', checked: false },
-      { value: 'blauw', label: 'Blauw', checked: true },
+      { value: 'blauw', label: 'Blauw', checked: false },
       { value: 'bruin', label: 'Bruin', checked: false },
       { value: 'groen', label: 'Groen', checked: false },
       { value: 'rood', label: 'Rood', checked: false },
@@ -52,7 +52,7 @@ const filters = [
       { value: '12l', label: '12L', checked: false },
       { value: '18l', label: '18L', checked: false },
       { value: '20l', label: '20L', checked: false },
-      { value: '40l', label: '40L', checked: true },
+      { value: '40l', label: '40L', checked: false },
     ],
   },
 ] 

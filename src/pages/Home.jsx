@@ -17,7 +17,7 @@ const Home = () => {
       if (entry.isIntersecting) {
         entry.target.classList.remove("translate-y-20");
         entry.target.classList.add("-1translate-y-6");
-        observer.unobserve(entry.target); // Eenmalige actie
+        observer.unobserve(entry.target); 
       }
     });
   });
@@ -105,23 +105,23 @@ const Home = () => {
               src="/images/boom1.jpg"
               alt="Bomen"
             />
-            <div className="absolute inset-0 bg-banana opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-              <span className="text-peach text-xl font-nunito">Bekijk winterbomen</span>
+            <div className="absolute inset-0 bg-banana opacity-0 group-hover:opacity-100 transition duration-300 flex items-center font-bold justify-center">
+              <span className="text-peach text-xl font-nunito">Bekijk producten</span>
             </div>
           </Link>
         </div>
 
         <div className="relative group max-h-[630px] overflow-hidden rounded-md">
-          <Link to="/bomen">
+          
             <img
               className="w-full h-full object-cover brightness-125"
               src="/images/boom2.jpg"
               alt="Bomen"
             />
-            <div className="absolute inset-0 bg-banana opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+            {/* <div className="absolute inset-0 bg-banana opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
               <span className="text-peach text-xl font-nunito">Bekijk zomerbomen</span>
-            </div>
-          </Link>
+            </div> */}
+
         </div>
       </div>  
     </>

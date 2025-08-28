@@ -7,8 +7,8 @@ import { NavLink, ScrollRestoration  } from 'react-router-dom';
 
 const Footer = ({ setShowContactForm }) => {
   return (
-    <footer className="bg-white">
-      <div className="bg-peach mx-auto flex flex-col max-w-7xl md:flex-row justify-between p-6 mt-3 mb-3 lg:px-8 rounded-lg">
+    <footer className="bg-blue pt-3 pb-3 ">
+      <div className="bg-peach mx-auto flex flex-col max-w-7xl md:flex-row justify-between p-6 lg:px-8 rounded-lg">
         <div className="mb-6 md:mb-0">
           <div className="font-bold font-nunito text-white mb-4">Site name
           </div>

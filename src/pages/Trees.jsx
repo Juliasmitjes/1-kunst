@@ -96,7 +96,8 @@ const Trees = () => {
 
 
   return (
-    <div  className="max-w-7xl mx-auto pt-24 bg-peach text-left p-4 pl-10 rounded-lg">
+    <div className='bg-blue'> 
+      <div  className="max-w-7xl mx-auto pt-24 bg-peach text-left p-4 pl-10 rounded-lg">
         <div className={styles.header}>
           <h1 id="textDiscover" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-3 pb-3 tracking-tight text-balance text-6xl text-banana">
           Schoonheid Is Overal
@@ -415,6 +416,10 @@ const Trees = () => {
         </main>
       </div>     
     </div>
+
+
+    </div>
+    
   )
 }
 

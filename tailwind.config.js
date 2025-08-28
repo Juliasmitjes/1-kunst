@@ -7,11 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        banana: '#FFF5CD',
-        peach: '#E78F81',
-        blue: '#B7E0FF',
-        sky: '#748DAE',
-        white: '#FFFBF5',
+        banana: '#FAF6E9',
+        peach: '#A0C878',
+        blue: '#DDEB9D',
+        sky: '#5A8F4B',
+        white: '#FFFDF6',
       },
       fontFamily: {
         pangaia: ['PP Pangaia', 'sans-serif'],  

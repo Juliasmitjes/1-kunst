@@ -32,7 +32,8 @@ const Home = () => {
 
   return (
     <>
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3 items-stretch">      
+    <div className='bg-blue'>
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3 items-stretch">      
           <div className="bg-banana p-4 pl-10 rounded-lg max-h-[630px] overflow-hidden" >
 
             <div className={styles.header}>
@@ -126,6 +127,10 @@ const Home = () => {
 
         </div>
       </div>  
+
+
+    </div>
+        
     </>
   );
 };

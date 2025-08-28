@@ -14,7 +14,7 @@ export default {
         white: '#FFFDF6',
       },
       fontFamily: {
-        pangaia: ['PP Pangaia', 'sans-serif'],  
+        pangaia: ['PF Agora Sans Pro Medium', 'sans-serif'],  
         nunito: ['Nunito', 'sans-serif'],
       },
     },

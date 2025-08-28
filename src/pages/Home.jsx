@@ -75,7 +75,7 @@ const Home = () => {
           <div className="max-h-[630px] overflow-hidden rounded-md">
             <img
               className="w-full h-full object-cover"
-              src={`${process.env.PUBLIC_URL}/images/test-image-woman-painting.jpg`}
+              src={`${process.env.PUBLIC_URL}/images/test-image-woman-painting.jpeg`}
               alt="Vrouw schildert kunstwerk"
             />
           </div>

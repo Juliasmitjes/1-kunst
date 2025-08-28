@@ -60,7 +60,7 @@ const Header = ({ setShowContactForm }) => {
             `text-xl/6 font-nunito font-bold ${isActive ? 'text-sky' : 'text-peach hover:text-sky'}`
           }
            >
-          Over mij
+          Galerij
           </NavLink>
 
           <NavLink
@@ -79,7 +79,7 @@ const Header = ({ setShowContactForm }) => {
             `text-xl/6 font-nunito font-bold ${isActive ? 'text-sky' : 'text-peach hover:text-sky'}`
           }
           >
-            Gallerij
+            Over mij
           </NavLink>
 
         </div>

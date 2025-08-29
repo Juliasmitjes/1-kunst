@@ -74,7 +74,7 @@ const Header = ({ setShowContactForm }) => {
 
 
          <NavLink
-          to="/gallerij"
+          to="/about-me"
           className={({ isActive }) =>
             `text-xl/6 font-nunito font-bold ${isActive ? 'text-sky' : 'text-peach hover:text-sky'}`
           }

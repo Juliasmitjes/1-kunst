@@ -39,7 +39,7 @@ const Footer = ({ setShowContactForm }) => {
                     `font-bold font-nunito ${isActive ? 'text-sky' : 'text-white hover:text-sky'}`
                   }
                 >
-                  Over mij
+                  Galerij
                 </NavLink>
               </li>
 
@@ -58,14 +58,14 @@ const Footer = ({ setShowContactForm }) => {
 
                <li>
                 <NavLink 
-                  to="/gallerij" 
+                  to="/about-me" 
                   end
                   onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                    className={({ isActive }) =>
                     `font-bold font-nunito ${isActive ? 'text-sky' : 'text-white hover:text-sky'}`
                   }
                 >
-                  Gallerij
+                  Over mij
                 </NavLink>
               </li>
 

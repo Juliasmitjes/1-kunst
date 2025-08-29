@@ -4,7 +4,7 @@ import Layout from './pages/Layout.jsx';
 import Home from './pages/Home.jsx';
 import Contact from './pages/Contact.jsx';
 import NoPage from "./pages/NoPage";
-import Gallery from './pages/Gallery.jsx';
+import AboutMe from './pages/AboutMe.jsx';
 import Trees from './pages/Trees.jsx';
 
 
@@ -15,7 +15,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="contact" element={<Contact />} />
         <Route path="*" element={<NoPage />} />
-        <Route path="gallerij" element={<Gallery />} />
+        <Route path="about-me" element={<AboutMe />} />
         <Route path="bomen" element={<Trees />} />
       </Route>
     </Routes>

@@ -10,7 +10,7 @@ const Footer = ({ setShowContactForm }) => {
     <footer className="bg-blue pt-3 pb-3 ">
       <div className="bg-peach mx-auto flex flex-col max-w-7xl md:flex-row justify-between p-6 lg:px-8 rounded-lg">
         <div className="mb-6 md:mb-0">
-          <div className="font-bold font-nunito text-white mb-4">Site name
+          <div className="font-bold font-nunito text-white mb-4 mt-1 text-xl">Site name
           </div>
 
           <div className="flex gap-4 text-white text-2xl">
@@ -28,7 +28,7 @@ const Footer = ({ setShowContactForm }) => {
         </div>
         <div className="mr-20 gap-6">
           <div>
-            <ul className="text-sm space-y-1 text-gray-700">
+            <ul className="text-xl space-y-1 text-gray-700">
 
              <li>
                 <NavLink 

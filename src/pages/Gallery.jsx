@@ -29,23 +29,6 @@ const Gallery = () => {
             </p>              
             </div>   
             <div className="flex space-x-4">
-
-            {/* <button
-              type="button"
-              onClick={() => setShowContactForm(true)}
-              className="rounded-md bg-peach font-bold px-4 py-2 text-xl font-nunito text-white hover:bg-sky transition"
-            >
-              Contact
-            </button>
-
-
-           <Link
-              to="/bomen"
-              className="inline-flex items-center gap-2 bg-white/30 hover:text-white backdrop-blur-sm text-peach border border-peach hover:border-sky px-4 py-2 rounded-md text-xl font-nunito hover:bg-sky/50 transition font-bold"
-            >
-              Galerij <ArrowRightIcon className="w-5 h-5" />
-            </Link> */}
-
             </div>            
           </div>
           <div className="max-h-[630px] overflow-hidden rounded-md">
@@ -145,11 +128,28 @@ const Gallery = () => {
             />
         </div>
       </div>
+     </div>
+   </div>
 
-            
+   <div className="max-w-7xl mx-auto mt-3 bg-peach text-left px-10 py-24 rounded-lg">
+    <div className={styles.header}>
+      <div className="grid grid-cols-3 gap-6">
+        <h1 id="textDiscover" className="col-span-2 tracking-tight text-balance text-6xl text-white">
+          Bekijk lichtsculpturen
+        </h1>
+
+            <Link
+              to="/bomen"
+              className="max-w-xl inline-flex items-center gap-2 bg-sky/50 backdrop-blur-sm text-white border border-sky hover:border-peach px-4 py-2 rounded-md text-xl font-nunito hover:bg-sky/30 transition font-bold"
+            >
+              Galerij <ArrowRightIcon className="w-5 h-5" />
+            </Link>
           </div>
+      
+          
         </div>
       </div>
+     </div>
     </>
   )
 };

@@ -2,6 +2,7 @@ import { CardText } from "reactstrap";
 
 const products = [
 {
+    name: "Boom 1",
     src: "/images/boom3.jpg",
     alt: "Boom1",
     color: "rood", 
@@ -9,6 +10,7 @@ const products = [
     category: "Winterbomen",
   },
   {
+    name: "Boom 2",
     src: "/images/boom3.jpg",
     alt: "Boom2",
     color: "rood", 
@@ -16,6 +18,7 @@ const products = [
     category: "Winterbomen",
   },
   {
+    name: "Boom 3",
     src: "/images/boom3.jpg",
     alt: "Boom3",
     color: "rood", 
@@ -23,6 +26,7 @@ const products = [
     category: "Winterbomen",
   },
   {
+    name: "Boom 4",
     src: "/images/boom3.jpg",
     alt: "Boom4",
     color: "rood", 
@@ -30,6 +34,7 @@ const products = [
     category: "Winterbomen",
   },
   {
+    name: "Boom 5",
     src: "/images/boom3.jpg",
     alt: "Boom5",
     color: "bruin", 
@@ -37,6 +42,7 @@ const products = [
     category: "Zomerbomen",
   },
   {
+    name: "Boom 6",
     src: "/images/boom3.jpg",
     alt: "Boom6",
     color: "bruin", 
@@ -44,6 +50,7 @@ const products = [
     category: "Zomerbomen",
   },
    {
+    name: "Boom 7",
     src: "/images/boom3.jpg",
     alt: "Boom7",
     color: "bruin", 
@@ -51,6 +58,7 @@ const products = [
     category: "Zomerbomen",
   },
    {
+    name: "Boom 8",
     src: "/images/boom3.jpg",
     alt: "Boom8",
     color: "bruin", 
@@ -58,6 +66,7 @@ const products = [
     category: "Zomerbomen",
   },
   {
+    name: "Boom 9",
     src: "/images/boom3.jpg",
     alt: "Boom9",
     color: "blauw", 
@@ -65,6 +74,7 @@ const products = [
     category: "Schilderijen",
   },
   {
+    name: "Boom 10",
     src: "/images/boom3.jpg",
     alt: "Boom10",
     color: "blauw", 
@@ -72,6 +82,7 @@ const products = [
     category: "Schilderijen",
   },
   {
+    name: "Boom 11",
     src: "/images/boom3.jpg",
     alt: "Boom11",
     color: "blauw", 
@@ -79,6 +90,7 @@ const products = [
     category: "Schilderijen",
   },
   {
+    name: "Boom 12", 
     src: "/images/boom3.jpg",
     alt: "Boom12",
     color: "blauw", 
@@ -86,6 +98,7 @@ const products = [
     category: "Schilderijen",
   },
   {
+    name: "Boom 13",
     src: "/images/boom3.jpg",
     alt: "Boom13",
     color: "groen", 
@@ -93,6 +106,7 @@ const products = [
     category: "Losse onderdelen",
   },
   {
+    name: "Boom 14", 
     src: "/images/boom3.jpg",
     alt: "Boom14",
     color: "groen", 
@@ -100,6 +114,7 @@ const products = [
     category: "Losse onderdelen",
   },
    {
+    name: "Boom 15",
     src: "/images/boom3.jpg",
     alt: "Boom15",
     color: "groen", 
@@ -107,6 +122,7 @@ const products = [
     category: "Losse onderdelen",
   },
    {
+    name: "Boom 16",
     src: "/images/boom3.jpg",
     alt: "Boom16",
     color: "groen", 

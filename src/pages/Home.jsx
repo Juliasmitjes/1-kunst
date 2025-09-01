@@ -6,8 +6,10 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import { RiArrowRightSLine , RiArrowLeftSLine } from "react-icons/ri";
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import { NavLink } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import products from '../data/products'
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -33,6 +35,11 @@ const Home = () => {
       swiperInstance.navigation.update();
     }
   }, [swiperInstance]);
+
+
+  const treeCategories = ['Winterbomen', 'Zomerbomen'];
+  const treeProducts = products.filter(product => treeCategories.includes(product.category));
+
 
   return (
     <>
@@ -140,46 +147,109 @@ const Home = () => {
                 className="swiper_container"
               >
                 <SwiperSlide>
-                  <img
-                    className="h-[600px] w-full object-cover"
-                    src={`${process.env.PUBLIC_URL}/images/boom1.jpg`}
-                    alt="slide_image"
-                  />
+                  <NavLink to="/#">
+                    <div className="relative group">
+                      <img
+                        className="h-[500px] w-full object-cover"
+                        src={`${process.env.PUBLIC_URL}/images/boom1.jpg`}
+                        alt="slide_image"
+                      />
+                      <div className="absolute bottom-0 left-0 w-full h-[100px] bg-white/80 text-gray-500 font-nunito font-bold text-xl flex items-center justify-center py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ">
+                        Bekijk
+                      </div>
+                    </div>
+                  </NavLink>
+                 <div className="mt-4">
+                    {treeProducts[0] && (
+                      <p className="text-xl font-bold font-nunito text-gray-800">{treeProducts[0].name}</p>
+                    )}
+                  </div>
                 </SwiperSlide>
+
                 <SwiperSlide>
-                  <img
-                    className="w-full h-[600px] object-cover"
-                    src={`${process.env.PUBLIC_URL}/images/boom2.jpg`}
-                    alt="slide_image"
-                  />
+                  <NavLink to="/#">
+                    <div className="relative group">
+                      <img
+                        className="h-[500px] w-full object-cover"
+                        src={`${process.env.PUBLIC_URL}/images/boom2.jpg`}
+                        alt="slide_image"
+                      />
+                      <div className="absolute bottom-0 left-0 w-full h-[100px] bg-white/80 text-gray-500 font-nunito font-bold text-xl flex items-center justify-center py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ">
+                        Bekijk
+                      </div>
+                    </div>
+                  </NavLink>
+                  <div className="mt-4">
+                    {treeProducts[1] && (
+                      <p className="text-xl font-bold font-nunito text-gray-800">{treeProducts[1].name}</p>
+                    )}
+                  </div>
                 </SwiperSlide>
+
                 <SwiperSlide>
-                  <img
-                    className="w-full h-[600px] object-cover"
-                    src={`${process.env.PUBLIC_URL}/images/boom3.jpg`}
-                    alt="slide_image"
-                  />
+                  <NavLink to="/#">
+                    <div className="relative group">
+                      <img
+                        className="h-[500px] w-full object-cover"
+                        src={`${process.env.PUBLIC_URL}/images/boom3.jpg`}
+                        alt="slide_image"
+                      />
+                      <div className="absolute bottom-0 left-0 w-full h-[100px] bg-white/80 text-gray-500 font-nunito font-bold text-xl flex items-center justify-center py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ">
+                        Bekijk
+                      </div>
+                    </div>
+                  </NavLink>
+                   <div className="mt-4">
+                    {treeProducts[2] && (
+                      <p className="text-xl font-bold font-nunito text-gray-800">{treeProducts[2].name}</p>
+                    )}
+                  </div>
                 </SwiperSlide>
+
                 <SwiperSlide>
-                  <img
-                    className="w-full h-[600px] object-cover"
-                    src={`${process.env.PUBLIC_URL}/images/boom1.jpg`}
-                    alt="slide_image"
-                  />
+                  <NavLink to="/#">
+                    <div className="relative group">
+                      <img
+                        className="h-[500px] w-full object-cover"
+                        src={`${process.env.PUBLIC_URL}/images/boom1.jpg`}
+                        alt="slide_image"
+                      />
+                      <div className="absolute bottom-0 left-0 w-full h-[100px] bg-white/80 text-gray-500 font-nunito font-bold text-xl flex items-center justify-center py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ">
+                        Bekijk
+                      </div>
+                    </div>
+                  </NavLink>
+                   <div className="mt-4">
+                    {treeProducts[3] && (
+                      <p className="text-xl font-bold font-nunito text-gray-800">{treeProducts[3].name}</p>
+                    )}
+                  </div>
                 </SwiperSlide>
+
                 <SwiperSlide>
-                  <img
-                    className="w-full h-[600px] object-cover"
-                    src={`${process.env.PUBLIC_URL}/images/boom2.jpg`}
-                    alt="slide_image"
-                  />
+                  <NavLink to="/#">
+                    <div className="relative group">
+                      <img
+                        className="h-[500px] w-full object-cover"
+                        src={`${process.env.PUBLIC_URL}/images/boom2.jpg`}
+                        alt="slide_image"
+                      />
+                      <div className="absolute bottom-0 left-0 w-full h-[100px] bg-white/80 text-gray-500 font-nunito font-bold text-xl flex items-center justify-center py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ">
+                        Bekijk
+                      </div>
+                    </div>
+                  </NavLink>
+                   <div className="mt-4">
+                    {treeProducts[4] && (
+                      <p className="text-xl font-bold font-nunito text-gray-800">{treeProducts[4].name}</p>
+                    )}
+                  </div>
                 </SwiperSlide>
               </Swiper>
 
               <div
                 ref={prevRef}
-                className="custom-prev absolute top-1/2 left-2 -translate-y-1/2 z-10 cursor-pointer"
-              >
+                className="custom-prev absolute top-1/2 left-2 -translate-y-1/2 z-10 cursor-pointer">
                 <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white/30 hover:bg-white/50 transition">
                   <RiArrowLeftSLine  />
                 </div>
@@ -187,8 +257,7 @@ const Home = () => {
 
               <div
                 ref={nextRef}
-                className="custom-next absolute top-1/2 right-2 -translate-y-1/2 z-10 cursor-pointer"
-              >
+                className="custom-next absolute top-1/2 right-2 -translate-y-1/2 z-10 cursor-pointer">
                 <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white/30 hover:bg-white/50 transition">
                   <RiArrowRightSLine />
                 </div>
@@ -197,7 +266,7 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Schilderijen sectie */}
+        {/* Schilderijen */}
         <div className="max-w-7xl mx-auto mt-3 bg-banana text-left p-4 pl-10 rounded-lg">
           <div className={styles.header}>
             <h1 className="pt-3 pb-3 tracking-tight text-balance text-6xl text-peach">
@@ -205,6 +274,7 @@ const Home = () => {
             </h1>
           </div>
         </div>
+
       </div>
     </>
   );

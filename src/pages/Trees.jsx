@@ -403,7 +403,7 @@ const Trees = () => {
               </form>
 
               {/* Product grid */}
-              <div className="lg:col-span-3 grid mx-auto grid-cols-4 gap-3 items-stretch mt-3">{filteredProducts.map((product, index) => (
+            <div className="lg:col-span-3 grid mx-auto grid-cols-4 gap-3 items-stretch mt-3">{filteredProducts.map((product, index) => (
             <img
               key={index}
               className="w-full h-full object-cover brightness-110"

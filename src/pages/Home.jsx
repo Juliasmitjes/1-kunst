@@ -32,24 +32,39 @@ const Home = () => {
 
   return (
     <>
-    <div className='bg-blue'>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3 items-stretch">      
-          <div className="bg-banana p-4 pl-10 rounded-lg max-h-[630px] overflow-hidden" >
+   <div className="bg-blue">
+      {/* Afbeelding met overlay */}
+      <div className="relative h-[630px] overflow-hidden rounded-md max-w-7xl mx-auto">
+        <img
+          className="w-full h-full object-cover"
+          src={`${process.env.PUBLIC_URL}/images/linnen.jpg`}
+          alt="Vrouw schildert kunstwerk"
+        />
 
-            <div className={styles.header}>
-            <h1 className="pt-24 text-balance text-6xl text-peach">
-              Moeder Accountant Kunstenaar 
-            </h1> 
-            </div>
+        {/* Rechterhelft blur + tekst */}
+        <div className="absolute top-0 right-0 w-1/2 h-full backdrop-blur-sm bg-white/10 flex items-center justify-start">
+          <div className="bg-white/60 h-[130px] w-[330px] p-6 flex text-center justify-center items-center ">
+            <p className="text-2xl font-pangaia text-peach ">Een hart vol kleur</p>
+          </div>
+        </div>
+      </div>
 
-            <div className={styles.text}>
-            <p className="mt-8 pb-10 pr-6">
-            Ik ben gek op het leven en vind ook veel leuk: getallen, taal, kinderen, kunst, … Soms is het lastig kiezen. Gelukkig hoeft ook niet alles tegelijk. Mijn leven is een avontuurlijke reis van accountant/controller, moeder en, nu de kinderen zijn uitgevlogen, als kunstenaar. Hoe heerlijk! Vorm kleur en creativiteit. Met hart en handen. 
+      {/* Tekstsectie los van afbeelding */}
+      <div className="bg-banana p-10 rounded-lg mt-10 max-w-7xl mx-auto">
+        <div className={styles.header}>
+          <h1 className="text-balance text-6xl text-peach">Een hart vol kleur</h1>
+        </div>
+
+        <div className={styles.text}>
+          <p className="mt-8 pb-10 pr-6 max-w-3xl">
+            Na het overlijden van mijn opa stond zijn doos pastelkrijt bij ons thuis. Ik mocht er alleen naar kijken, want pastelkrijt was niet geschikt voor handjes van een zesjarige. Ik begreep dat, maar vond het ook jammer. Die doos met prachtige kleuren had een magische aantrekkingskracht.
             <br /><br />
-            Stiekem heb ik altijd een ambacht willen uitoefenen. 
-            </p>              
-            </div>   
-          
+            Die magie is er nog steeds. Ik geniet nu zo van mijn kleurrijke schatten. Soms ga ik aan de slag met een tekening. Soms kijk ik alleen maar en maak ik proefstrookjes van kleurencombinaties. De mogelijkheden zijn eindeloos. Na een avond met mijn krijtjes, ben ik gelukkig, ik slaap daarna met een hart vol kleur.
+          </p>
+       </div>
+     </div>
+      
+     
 
             <div className="flex space-x-4">
 
@@ -72,15 +87,8 @@ const Home = () => {
             </div>            
           </div>
 
-          <div className="max-h-[630px] overflow-hidden rounded-md">
-            <img
-              className="w-full h-full object-cover"
-              src={`${process.env.PUBLIC_URL}/images/test-image-woman-painting.jpeg`}
-              alt="Vrouw schildert kunstwerk"
-            />
-          </div>
-        </div>
-
+          
+       
         <div className="max-w-7xl mx-auto mt-3">
           <img
             className="w-full h-full object-cover max-h-[330px] rounded-lg brightness-110 transition"
@@ -128,8 +136,6 @@ const Home = () => {
         </div>
       </div>  
 
-
-    </div>
         
     </>
   );

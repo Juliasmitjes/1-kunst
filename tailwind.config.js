@@ -7,9 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        banana: '#FAF6E9',
+        banana: '#f8f8f6',
         sky: '#A0C878',
-        blue: '#DDEB9D',
+        blue: '#e1e8d0',
         peach: '#5A8F4B',
         white: '#FFFDF6',
       },

@@ -8,9 +8,9 @@ export default {
     extend: {
       colors: {
         banana: '#f8f8f6',
-        sky: '#A0C878',
+        sky: '#9aaa91',
         blue: '#e1e8d0',
-        peach: '#5A8F4B',
+        peach: '#86977f',
         white: '#FFFDF6',
       },
       fontFamily: {

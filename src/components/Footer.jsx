@@ -43,19 +43,6 @@ const Footer = ({ setShowContactForm }) => {
                 </NavLink>
               </li>
 
-              <li>
-                <NavLink 
-                  to="/bomen" 
-                  end
-                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                   className={({ isActive }) =>
-                    `font-bold font-nunito ${isActive ? 'text-sky' : 'text-white hover:text-sky'}`
-                  }
-                >
-                  Producten
-                </NavLink>
-              </li>
-
                <li>
                 <NavLink 
                   to="/about-me" 

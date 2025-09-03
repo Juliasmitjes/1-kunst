@@ -69,21 +69,18 @@ const Home = () => {
         
         <div className="bg-banana p-10 rounded-lg mt-3 max-w-7xl mx-auto">
           <div className={styles.header}>
-            <h1 className="text-balance text-6xl text-peach">Een hart vol kleur</h1>
+            <h1 className="text-balance text-6xl text-peach">Licht in alle seizoen</h1>
           </div>
 
           <div className={styles.text}>
             <p className="mt-8 pb-10 pr-6 max-w-3xl">
-              Na het overlijden van mijn opa stond zijn doos pastelkrijt bij ons thuis. Ik mocht er
-              alleen naar kijken, want pastelkrijt was niet geschikt voor handjes van een zesjarige.
-              Ik begreep dat, maar vond het ook jammer. Die doos met prachtige kleuren had een
-              magische aantrekkingskracht.
+              Kerstbomen passen niet in deze tijd van duurzaamheidsopgaven. We moeten bomen planten en niet kappen. Een kunstboom als alternatief? Dat is ook niet echt duurzaam.
               <br />
               <br />
-              Die magie is er nog steeds. Ik geniet nu zo van mijn kleurrijke schatten. Soms ga ik
-              aan de slag met een tekening. Soms kijk ik alleen maar en maak ik proefstrookjes van
-              kleurencombinaties. De mogelijkheden zijn eindeloos. Na een avond met mijn krijtjes,
-              ben ik gelukkig, ik slaap daarna met een hart vol kleur.
+              Ik ben de uitdaging aangegaan om met minimaal materiaal een maximaal effect te bereiken. Dat is gelukt! Mijn lichtsculpturen hebben een grootse uitstraling. En het materiaalgebruik is beperkt: drie stokken, wat ijzeren ringen, een lichtsnoer en wat stof en vilt. Voordeel is ook dat je de sculptuur na Kerst makkelijk opbergt. Eén doos, die stokken en de ringen met een haak aan de muur. Dat is alles.
+              <br />
+              <br />
+              Maar je kunt de sculptuur ook laten staan. Met wat andere hangers, maak je er een Paas- of herfstcreatie van. Eigenlijk zijn de lichtsculpturen in alle seizoenen leuk.
             </p>
           </div>
 
@@ -93,14 +90,14 @@ const Home = () => {
               onClick={() => setShowContactForm(true)}
               className="rounded-md bg-peach px-4 py-2 text-xl font-nunito font-bold text-white hover:bg-sky transition"
             >
-              Meer informatie
+              Nieuwsgierig? Kijk hier
             </button>
 
             <Link
               to="/bomen"
               className="inline-flex items-center font-bold gap-2 bg-white/30 hover:text-white backdrop-blur-sm text-peach border border-peach hover:border-sky px-4 py-2 rounded-md text-xl font-nunito hover:bg-sky/50 transition"
             >
-              Producten <ArrowRightIcon className="w-5 h-5" />
+              Contact  <ArrowRightIcon className="w-5 h-5" />
             </Link>
           </div>
         </div>

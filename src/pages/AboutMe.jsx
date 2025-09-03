@@ -13,25 +13,31 @@ const Gallery = () => {
       <div className='bg-blue'>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3 items-stretch">      
-          <div className="bg-banana p-4 pl-10 rounded-lg max-h-[630px] overflow-hidden" >
+          <div className="bg-banana p-4 pl-10 rounded-lg max-h-[670px] overflow-hidden" >
 
             <div className={styles.header}>
-            <h1 className="pt-24 text-balance text-6xl text-peach">
-              Moeder Accountant Kunstenaar 
+            <h1 className="pt-24 text-balance leading-snug text-6xl text-peach">
+              Veelzijdig en bevlogen
             </h1> 
             </div>
 
             <div className={styles.text}>
-            <p className="mt-8 pb-20 pr-6">
-            Ik ben gek op het leven en vind ook veel leuk: getallen, taal, kinderen, kunst, … Soms is het lastig kiezen. Gelukkig hoeft ook niet alles tegelijk. Mijn leven is een avontuurlijke reis van accountant/controller, moeder en, nu de kinderen zijn uitgevlogen, als kunstenaar. Hoe heerlijk! Vorm kleur en creativiteit. Met hart en handen. 
+            <p className="mt-8 pb-10 pr-6">
+           Ik ben gek op het leven en vind ook veel leuk: getallen, taal, kinderen, kunst. Soms is het lastig kiezen. Gelukkig hoeft niet alles tegelijk. Mijn leven is een avontuurlijke reis van accountant, moeder én kunstenaar. Hoe heerlijk! Vorm kleur en creativiteit. Met hart en handen en altijd met passie.
             <br /><br />
-            Stiekem heb ik altijd een ambacht willen uitoefenen. 
+            Ik maak pasteltekeningen en lichtsculpturen.
             </p>              
-            </div>   
-            <div className="flex space-x-4">
-            </div>            
+            </div>  
+            <div className='mb-20'>
+              <Link
+              to="/bomen"
+              className="inline-flex items-center rounded-md bg-peach px-4 py-2 text-xl font-nunito font-bold text-white hover:bg-sky transition"
+            >
+              Nieuwsgierig? Kijk hier  <ArrowRightIcon className="w-5 h-5" />
+            </Link> 
+            </div>           
           </div>
-          <div className="max-h-[630px] overflow-hidden rounded-md">
+          <div className="max-h-[670px] overflow-hidden rounded-md">
             <img
               className="w-full h-full object-cover"
               src={`${process.env.PUBLIC_URL}/images/test-image-woman-painting.jpeg`}
@@ -140,7 +146,7 @@ const Gallery = () => {
 
             <Link
               to="/bomen"
-              className="max-w-xl inline-flex items-center gap-2 bg-sky/50 backdrop-blur-sm text-white border border-sky hover:border-peach px-4 py-2 rounded-md font-nunito hover:bg-sky/30 transition font-bold text-2xl"
+              className="max-w-xl inline-flex items-center gap-2 bg-sky/100 backdrop-blur-sm text-white border border-sky hover:border-peach px-4 py-4 rounded-md font-nunito hover:bg-sky/30 transition font-bold text-2xl"
             >
               Galerij <ArrowRightIcon className="w-5 h-5" />
             </Link>

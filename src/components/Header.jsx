@@ -63,16 +63,6 @@ const Header = ({ setShowContactForm }) => {
           Galerij
           </NavLink>
 
-          <NavLink
-          to="/bomen"
-          className={({ isActive }) =>
-            `text-xl/6 font-nunito font-bold ${isActive ? 'text-sky' : 'text-peach hover:text-sky'}`
-          }
-          >
-            Producten
-          </NavLink>
-
-
          <NavLink
           to="/about-me"
           className={({ isActive }) =>
